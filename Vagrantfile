@@ -1,10 +1,10 @@
 Vagrant::configure("2") do |config|
-  config.vm.box = "coupla-dev"
+  config.vm.box = "chicken-coop-dev"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-  config.vm.hostname = "coupla.dev"
+  config.vm.hostname = "coop.dev"
 
   config.vm.provider :virtualbox do |vb|
-    vb.name = "coupla-dev"
+    vb.name = "chicken-coop-dev"
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
@@ -21,7 +21,6 @@ Vagrant::configure("2") do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-#    chef.add_recipe("mongodb-10gen")
     chef.add_recipe("op")
     chef.add_recipe("nginx")
     chef.add_recipe("php")
