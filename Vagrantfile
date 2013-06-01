@@ -15,7 +15,7 @@ Vagrant::configure("2") do |config|
   config.vm.network :forwarded_port, guest: 27017, host: 27017 #mongo
   config.vm.network :forwarded_port, guest: 15672, host: 15672 #rabbitmq-admin
 
-  config.vm.network :private_network, ip: "10.0.2.3"
+  config.vm.network :private_network, ip: "10.1.0.3"
 
   config.vm.synced_folder "code", "/virtualhosts", :nfs => true
 
