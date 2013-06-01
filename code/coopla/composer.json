@@ -1,0 +1,15 @@
+{
+    "name": "coopla/web",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Englander",
+            "email": "adam.englander@coupla.co"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "silex/silex": "*",
+        "neutron/mongo-odm-silex-provider": "*"
+    }
+}

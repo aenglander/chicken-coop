@@ -12,24 +12,6 @@ package "git" do
   action :install
 end
 
-bash "install-amqp" do
-  user "root"
-  cwd "/tmp"
-  code <<-EOH
-  git clone git://github.com/alanxz/rabbitmq-c.git
-  cd rabbitmq-c
-  # Enable and update the codegen git submodule
-  git submodule init
-  git submodule update
-  # Configure, compile and install
-  autoreconf -i && ./configure && make && sudo make install
-  EOH
-end
-
-php_pear "amqp" do
-  action :install
-end
-
 if platform_family?("rhel")
   bin_dir = "/usr/bin"
 else

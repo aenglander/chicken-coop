@@ -25,10 +25,8 @@ Vagrant::configure("2") do |config|
     chef.add_recipe("nginx")
     chef.add_recipe("php")
     chef.add_recipe("op::mongo")
-    chef.add_recipe("op::rabbitmq")
     chef.add_recipe("op::php")
-    chef.add_recipe("op::coupla-site")
-    chef.add_recipe("op::java")
+    chef.add_recipe("op::coopla-site")
 
     chef.json = {
         "php" => {
