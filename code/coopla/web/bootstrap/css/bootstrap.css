@@ -1969,7 +1969,6 @@ legend + .control-group {
 .form-horizontal .controls {
   *display: inline-block;
   *padding-left: 20px;
-  margin-left: 180px;
   *margin-left: 0;
 }
 
@@ -3290,7 +3289,6 @@ button.close {
 }
 
 .btn-large {
-  width: 800px !important;
   max-width: 100% ;
   padding: 11px 19px;
   font-size: 1.09375em;
